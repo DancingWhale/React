@@ -1,17 +1,16 @@
 import React, {useState} from 'react';
 import ProTypes from 'prop-types';
-import { render } from '@testing-library/react';
 
 // Props는 읽기 전용
 // Component 상속 받아서 state 확인
 const Test = ({name, birth, lang}) => {
-    const [hidden, setHidden] = useState(false);
+    const [hidden, setHidden] = useState(false);        //useState (hook 기능) hook에는 constructor (class용)이 없음
 
     return (
         <div>
             <span> I'm {lang} expert {name}</span>
             I was born in {!hidden && <span>{birth} </span>}
-            <button onClick={() => setHidden(true)}>숨기기</button>
+            <button onClick={() => setHidden(true)}>숨기기</button>    
         </div>
     );
 };

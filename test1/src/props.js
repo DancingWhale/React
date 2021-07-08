@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import ProTypes from 'prop-types';
-import { render } from '@testing-library/react';
+
 
 // Props는 읽기 전용
 // Component 상속 받아서 state 확인
@@ -8,8 +8,15 @@ class Test extends Component {
     constructor(props){
         super(props);
         this.state = {
-            hidden : true,
+            hidden : false,
         };
+        // this. 클릭버튼 추가
+        this.onClickButton = this.onClickButton.bind(this);
+    }
+
+    // onclickButton 이벤트 추가
+    onClickButton() {
+        this.setState(() => ({ hidden: true }));
     }
 
     // 실제로 그려지는 부분
@@ -18,8 +25,10 @@ class Test extends Component {
         return (
             <div>
                 <span> I'm {this.props.lang} expert {this.props.name}. </span>
-                I was born in {this.state.hidden && <span>{this.props.birth} </span>}
-                <button onClick={() => this.setState(() => ({ hidden: false }))}>숨기기</button>
+                {/*I was born in {this.state.hidden && <span>{this.props.birth} </span>}*/}
+                I was born in {!this.state.hidden && <span>{this.props.birth} </span>}
+                {/*<button onClick={() => this.setState(() => ({ hidden: false }))}>숨기기</button>*/}
+                <button onClick={this.onClickButton}>숨기기</button>
             </div>
         );
     }

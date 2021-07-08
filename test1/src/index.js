@@ -3,7 +3,8 @@ import React from 'react';
 import './index.css';
 // new component
 //import Basic from './basic';
-import Props from './functionProps';
+//import Props from './functionProps'; // 함수용
+import Props from './props';
 import reportWebVitals from './reportWebVitals';
 import { render } from '@testing-library/react';
 
