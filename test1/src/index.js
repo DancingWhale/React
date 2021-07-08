@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 // new component
-import Basic from './basic';
+//import Basic from './basic';
+import Props from './props';
 import reportWebVitals from './reportWebVitals';
 import { render } from '@testing-library/react';
 
-render(<Basic />, document.getElementById('root'));
+//render(<Props />, document.getElementById('root'));
+
+render(<Props name ="Zero" birth={1991} />,
+document.getElementById('root'));
 
 /*ReactDOM.render(
   <React.StrictMode>
