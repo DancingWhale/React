@@ -2,7 +2,14 @@ git config user.name DancingWhale
 git config user.email whdgh409@gmail.com
 
 git remote add origin https://github.com/DancingWhale/react 
+
+// push
 git push --set-upstream origin master
 
+// pull
+git pull https://github.com/DancingWhale/react 
+
+// branch 삭제
 git branch -d main
+
 git push origin master
