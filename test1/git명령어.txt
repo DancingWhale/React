@@ -1,0 +1,8 @@
+git config user.name DancingWhale
+git config user.email whdgh409@gmail.com
+
+git remote add origin https://github.com/DancingWhale/react 
+git push --set-upstream origin master
+
+git branch -d main
+git push origin master

@@ -2,13 +2,13 @@ import React, {Component} from 'react';
 import ProTypes from 'prop-types';
 import { render } from '@testing-library/react';
 
-
+// Props는 읽기 전용
 // Component 상속 받아서 state 확인
 class Test extends Component {
     constructor(props){
         super(props);
         this.state = {
-            hidden : false,
+            hidden : true,
         };
     }
 
@@ -19,7 +19,7 @@ class Test extends Component {
             <div>
                 <span> I'm {this.props.lang} expert {this.props.name}. </span>
                 I was born in {this.state.hidden && <span>{this.props.birth} </span>}
-                <button onClick={() => this.setState(() => ({ hidden: true }))}>숨기기</button>
+                <button onClick={() => this.setState(() => ({ hidden: false }))}>숨기기</button>
             </div>
         );
     }

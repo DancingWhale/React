@@ -1,10 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 // new component
 //import Basic from './basic';
-import Props from './props';
+import Props from './functionProps';
 import reportWebVitals from './reportWebVitals';
 import { render } from '@testing-library/react';
 
